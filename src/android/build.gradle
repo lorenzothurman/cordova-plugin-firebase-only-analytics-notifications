@@ -38,6 +38,13 @@ dependencies {
 }
 
 cdvPluginPostBuildExtras.add({
-  apply plugin: 'com.google.gms.google-services'
-  apply plugin: 'io.fabric'
+    afterEvaluate {
+        rootProject.subprojects {
+            if (name == "app") {
+                if (!plugins.hasPlugin('com.google.gms.google-services')) {
+                    apply plugin: com.google.gms.googleservices.GoogleServicesPlugin
+                }
+            }
+        }
+    }
 })
