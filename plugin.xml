@@ -21,8 +21,8 @@
   <preference name="APP_PATH" default="/" />
 
   <platform name="android">
-    <hook type="after_plugin_install" src="scripts/crashlytics/android/after_plugin_install.js" />
-    <hook type="before_plugin_uninstall" src="scripts/crashlytics/android/before_plugin_uninstall.js" />
+    <!-- hook type="after_plugin_install" src="scripts/crashlytics/android/after_plugin_install.js" / -->
+    <!-- hook type="before_plugin_uninstall" src="scripts/crashlytics/android/before_plugin_uninstall.js" / -->
     <hook type="before_plugin_install" src="scripts/configurations/unzipAndCopySound.js" />
 
     <config-file parent="/*" target="res/xml/config.xml">
@@ -107,7 +107,7 @@
     <source-file src="src/ios/FirebasePlugin.m" />
 
 <!--     <framework src="Fabric" type="podspec" spec="~> 1.9" />
-    <framework src="Crashlytics" type="podspec" spec="~> 3.12" /> -->
+    <!-- framework src="Crashlytics" type="podspec" spec="~> 3.12" /> -->
     <framework src="FirebaseAnalytics" type="podspec" spec="~> 4.2" />
     <framework src="FirebaseMessaging" type="podspec" spec="~> 2.2" />
    <!--  <framework src="FirebaseAuth" type="podspec" spec="~> 4.6.1" />
